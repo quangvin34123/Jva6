@@ -9,5 +9,4 @@ public class DuanJava6Application {
     public static void main(String[] args) {
         SpringApplication.run(DuanJava6Application.class, args);
     }
-
 }
