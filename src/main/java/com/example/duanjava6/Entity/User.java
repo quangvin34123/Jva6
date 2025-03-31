@@ -22,7 +22,7 @@ public class User {
     private String email;
 
     @Column(nullable = false, length = 255)
-    private String password;
+    private String password; // Mật khẩu sẽ được mã hóa bằng BCrypt
 
     @Column(length = 15)
     private String phone;
