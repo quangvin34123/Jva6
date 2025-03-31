@@ -17,7 +17,7 @@ public class ResetPasswordController {
 
     @GetMapping("/forgot-password")
     public String showForgotPassword() {
-        return "forgot-password";
+        return "forgotpassword";
     }
 
     @PostMapping("/forgot-password")
