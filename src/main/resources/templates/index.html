@@ -78,13 +78,13 @@
                         </ul>
                     </div>
                 </li>
-                <!-- Kiểm tra nếu chưa đăng nhập -->
                 <li class="nav-item" sec:authorize="!isAuthenticated()">
                     <a class="nav-link" th:href="@{/login}">Đăng nhập</a>
                 </li>
             </ul>
         </div>
     </div>
+    
 </nav>
 
 <!-- Slider -->
@@ -110,7 +110,7 @@
     <h2 class="text-center">Danh mục sản phẩm</h2>
     <div class="row text-center">
         <div th:each="category : ${categories}" class="col-md-4">
-            <img th:src="'/Image/' + ${category.name.toLowerCase()} + '.jpg'" 
+            <img th:src="'/Image/z6416417883444_01f178963e02ed94204b14abb94e95a3' + ${category.name.toLowerCase()} + '.jpg'" 
                  class="img-fluid category-img" 
                  th:data-category="${category.name.toLowerCase()}" 
                  onclick="filterProducts(this.getAttribute('data-category'))">
