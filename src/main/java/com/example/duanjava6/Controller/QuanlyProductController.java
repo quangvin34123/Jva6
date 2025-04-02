@@ -33,7 +33,7 @@ public class QuanlyProductController {
     private CategoryDAO categoryDAO;
 
     // Thư mục lưu ảnh
-    private static final String UPLOAD_DIR = "C:\\JAVA6\\Jva6\\src\\main\\resources\\static\\Image\\";
+    private static final String UPLOAD_DIR = "C:\\Jva6\\Jva6\\Jva6\\src\\main\\resources\\static\\Image";
 
     @GetMapping
     public String listProducts(Model model) {

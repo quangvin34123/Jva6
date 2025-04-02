@@ -56,8 +56,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" th:href="@{/index}">Trang chủ</a></li>
-                <li class="nav-item"><a class="nav-link" th:href="@{/product}">Sản phẩm</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/}">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/products/product}">Sản phẩm</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
             </ul>
@@ -67,15 +67,17 @@
 
 <div class="login-container">
     <h2 class="text-center">Đăng nhập</h2>
-    <div class="error" th:if="${error}" th:text="${error}"></div>
-    <form th:action="@{/login}" th:object="${user}" method="post">
+    <div class="error" th:if="${param.error}">
+        <p>Email hoặc mật khẩu không đúng!</p>
+    </div>
+    <form th:action="@{/login}" method="post">
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" th:field="*{email}" placeholder="Nhập email" required>
+            <input type="email" class="form-control" id="email" name="username" placeholder="Nhập email" required>
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Mật khẩu</label>
-            <input type="password" class="form-control" id="password" th:field="*{password}" placeholder="Nhập mật khẩu" required>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Nhập mật khẩu" required>
         </div>
         <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
         <p class="text-center mt-3">Chưa có tài khoản? <a th:href="@{/signup}">Đăng ký</a></p>
